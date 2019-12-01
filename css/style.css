@@ -1,0 +1,35 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'Volkswagen Office Head';
+  src: url("VWHeadOffice.eot");
+  src: url("VWHeadOffice.eot?#iefix") format("embedded-opentype"), url("VWHeadOffice.woff") format("woff"), url("VWHeadOffice.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Volkswagen Office Head';
+  src: url("fonts/VWHeadOffice.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+.container {
+  margin: 0 auto;
+  max-width: 1140px; }
+  @media (max-width: ≥992px) {
+    .container {
+      max-width: 960px; } }
+  @media (max-width: ≥768px) {
+    .container {
+      max-width: 960px; } }
+  @media (max-width: ≥576px) {
+    .container {
+      max-width: 540px; } }
+
+body {
+  color: #2f3538;
+  font-family: 'Volkswagen Office Head', sans-serif;
+  font-size: 16px; }
+
+.navbar {
+  display: flex;
+  justify-content: space-between; }

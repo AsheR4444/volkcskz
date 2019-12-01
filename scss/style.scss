@@ -1,0 +1,39 @@
+@import '_fonts';
+// == Grid ==
+@font-face {
+  font-family: 'Volkswagen Office Head';
+  src: url('fonts/VWHeadOffice.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1140px;
+  @media (max-width: ≥992px) {
+    max-width: 960px;
+  }
+  @media (max-width: ≥768px) {
+    max-width: 960px;
+  }
+  @media (max-width: ≥576px) {
+    max-width: 540px;
+  }
+}
+// == /Grid ==
+// Dom
+// Main
+body {
+  color: #2f3538;
+  font-family: 'Volkswagen Office Head', sans-serif;
+  font-size: 16px;
+}
+// /Main
+// Navbar
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+// //Navbar
+
+// /Dom
