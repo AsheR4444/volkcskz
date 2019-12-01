@@ -1,13 +1,13 @@
 // == Fonts ==
 @font-face {
-  font-family: 'Volkswagen Office Head';
-  src: url('fonts/VWHeadOffice.woff') format('woff');
+  font-family: "Volkswagen Office Head";
+  src: url("fonts/VWHeadOffice.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Volkswagen Print Text Bold';
-  src: url('fonts/VWText-Bold.woff') format('woff');
+  font-family: "Volkswagen Print Text Bold";
+  src: url("fonts/VWText-Bold.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 // == Variables ==
 $col-primary: #0099da;
 $col-hover: #0068aa;
-$bold: 'Volkswagen Print Text Bold';
+$bold: "Volkswagen Print Text Bold";
 // == /Variables ==
 
 // == Grid ==
@@ -31,15 +31,26 @@ $bold: 'Volkswagen Print Text Bold';
   @media (max-width: ≥576px) {
     max-width: 540px;
   }
+  &-full {
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
 }
 // == /Grid ==
 
 // Dom
 
 // Main
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none !important;
+}
 body {
   color: #2f3538;
-  font-family: 'Volkswagen Office Head', sans-serif;
+  font-family: "Volkswagen Office Head", sans-serif;
   font-size: 16px;
 }
 a {
@@ -48,23 +59,55 @@ a {
 img {
   max-width: 100%;
 }
+.section {
+  padding: 80px 0 30px 0;
+  &-title {
+    font-size: 45px;
+    margin-bottom: 30px;
+    color: #000;
+    text-align: center;
+  }
+}
+h3 {
+  color: #000;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
 .button {
-  background-color: $col-primary;
-  border: none;
   border-radius: 4px;
   font-size: 14px;
-  color: #fff;
-  font-family: $bold, sans-serif;
   font-weight: bold;
-  padding: 4px 10px;
+  width: 200px;
+  min-height: 40px;
+  display: block;
   &:hover {
     background: $col-hover;
+    color: #fff;
+  }
+  &_main {
+    color: #fff;
+    background-color: $col-primary;
+    border: 1px solid $col-primary;
+    &:hover {
+      background: $col-hover;
+      border: 1px solid $col-hover;
+    }
+  }
+  &_white {
+    background-color: #fff;
+    color: $col-primary;
+    border: 1px solid rgb(222, 225, 227);
   }
   &_mini {
     max-width: 100px;
   }
 }
 // /Main
+
+// == slider ==
+.slider {
+}
+// == /slider ==
 
 // Navbar
 .navbar {
@@ -103,6 +146,126 @@ img {
     }
   }
 }
-// //Navbar
+// == /Navbar ==
+
+// == header ==
+.header {
+  &-slider {
+    position: relative;
+    &__item {
+      position: relative;
+    }
+    &__button {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      margin-left: -100px;
+    }
+  }
+  .slider {
+    &-overlay {
+      display: flex;
+      position: absolute;
+      z-index: 100;
+      top: 35px;
+      right: 30px;
+      &__item {
+        text-align: center;
+        margin-left: 30px;
+        color: #000;
+      }
+      &__circle {
+        margin: 0 auto;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 50%;
+        background: rgba(29, 31, 32, 0.3);
+        i {
+          color: #fff;
+        }
+        &:hover {
+          background: rgba(29, 31, 32, 0.5);
+        }
+      }
+    }
+    &__arrow {
+      position: absolute;
+      z-index: 150;
+      height: 80px;
+      width: 40px;
+      line-height: 20px;
+      text-align: center;
+      top: 50%;
+      border: none;
+      background: rgb(187, 187, 188);
+      &:hover {
+        background: rgb(142, 143, 143);
+      }
+      i {
+        font-size: 35px;
+        color: #fff;
+      }
+      &_right {
+        right: 0;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+      &_left {
+        left: 0;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+    }
+  }
+}
+// == /header ==
+
+// == models ==
+.models {
+  &-slider {
+    display: flex;
+    justify-content: center;
+
+    &__item {
+      width: 20%;
+      text-align: center;
+    }
+    &__img {
+    }
+    &__title {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+}
+// == /models ==
+// == offer ==
+.offer {
+  &-slider {
+    max-width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+  }
+  &-item {
+  }
+  &__img {
+  }
+  &__title {
+  }
+  &__subtitle {
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  &__text {
+    margin-bottom: 20px;
+  }
+  button {
+    margin: auto;
+    margin-bottom: 10px;
+  }
+}
+// == /offer ==
 
 // /Dom
