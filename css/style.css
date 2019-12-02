@@ -67,7 +67,8 @@ h3 {
   display: block; }
   .button:hover {
     background: #0068aa;
-    color: #fff; }
+    color: #fff;
+    border: 1px solid #0068aa; }
   .button_main {
     color: #fff;
     background-color: #0099da;
@@ -81,6 +82,23 @@ h3 {
     border: 1px solid #dee1e3; }
   .button_mini {
     max-width: 100px; }
+
+.form__rules {
+  font-size: 14px;
+  color: #fff;
+  margin-left: 30px;
+  text-decoration: underline;
+  font-weight: bold; }
+  .form__rules:hover {
+    text-decoration: none; }
+
+.form__input {
+  width: 100%;
+  padding: 7px 15px;
+  border-radius: 4px;
+  border: 1px solid #dee1e3;
+  height: 45px;
+  margin-bottom: 20px; }
 
 .navbar {
   display: flex;
@@ -264,3 +282,51 @@ h3 {
 
 .dealer__button {
   margin: 0 auto; }
+
+.communicate {
+  background: #0099da;
+  color: #fff; }
+  .communicate-wrapper {
+    display: flex; }
+  .communicate-text {
+    flex-basis: 50%;
+    padding-left: 30px; }
+    .communicate-text__title {
+      font-size: 45px;
+      font-weight: bold; }
+    .communicate-text__text {
+      font-size: 14px;
+      width: 80%; }
+  .communicate-form {
+    flex-basis: 50%; }
+    .communicate-form__input {
+      width: 85%; }
+    .communicate-form__button {
+      display: block;
+      margin-top: 45px; }
+    .communicate-form__checkbox {
+      margin: 30px 0; }
+
+.proposal-wrapper {
+  display: flex;
+  justify-content: space-between; }
+
+.proposal-item {
+  width: 33%;
+  text-align: center; }
+
+.proposal__img {
+  margin-bottom: 30px; }
+  .proposal__img img {
+    max-height: 120px;
+    max-width: 213px; }
+
+.proposal__title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px; }
+
+.proposal__link {
+  color: #0099da; }
+  .proposal__link i {
+    font-size: 18px; }
