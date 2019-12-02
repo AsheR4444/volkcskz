@@ -1,13 +1,13 @@
 // == Fonts ==
 @font-face {
-  font-family: "Volkswagen Office Head";
-  src: url("fonts/VWHeadOffice.woff") format("woff");
+  font-family: 'Volkswagen Office Head';
+  src: url('fonts/VWHeadOffice.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: "Volkswagen Print Text Bold";
-  src: url("fonts/VWText-Bold.woff") format("woff");
+  font-family: 'Volkswagen Print Text Bold';
+  src: url('fonts/VWText-Bold.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,28 +15,38 @@
 // == Variables ==
 $col-primary: #0099da;
 $col-hover: #0068aa;
-$bold: "Volkswagen Print Text Bold";
+$bold: 'Volkswagen Print Text Bold';
 // == /Variables ==
 
 // == Grid ==
 .container {
-  margin: 0 auto;
-  max-width: 1300px;
-  @media (max-width: ≥992px) {
-    max-width: 960px;
-  }
-  @media (max-width: ≥768px) {
-    max-width: 960px;
-  }
-  @media (max-width: ≥576px) {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  @media (min-width: 576px) {
     max-width: 540px;
   }
+  @media (min-width: 768px) {
+    max-width: 720px;
+  }
+
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+
   &-full {
     max-width: 100%;
     overflow: hidden;
     position: relative;
   }
 }
+
 // == /Grid ==
 
 // Dom
@@ -50,7 +60,7 @@ $bold: "Volkswagen Print Text Bold";
 }
 body {
   color: #000;
-  font-family: "Volkswagen Office Head", sans-serif;
+  font-family: 'Volkswagen Office Head', sans-serif;
   font-size: 16px;
 }
 a {
@@ -316,15 +326,18 @@ h3 {
   background: #f3f5f6;
   &-wrapper {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
   &-item {
-    width: 33%;
+    width: 30%;
     text-align: center;
   }
   &__img {
-    width: 100%;
-    max-height: 225px;
+    img {
+      max-width: 290px;
+      height: 180px;
+    }
   }
   &__title {
     margin: 35px auto 10px auto;
@@ -335,9 +348,7 @@ h3 {
     min-height: 80px;
   }
   &__text {
-    width: 75%;
     margin: 0 auto;
-    height: 125px;
   }
   &__button {
     margin: 35px auto;
@@ -347,6 +358,17 @@ h3 {
     justify-content: center;
     a {
       display: block;
+    }
+  }
+  @media (max-width: 1024px) {
+    &-wrapper {
+      justify-content: space-evenly;
+      align-items: center;
+    }
+  }
+  @media (max-width: 768px) {
+    &-item {
+      width: 70%;
     }
   }
 }
@@ -359,7 +381,7 @@ h3 {
   }
   &-item {
     margin: auto;
-    width: 40%;
+    width: 50%;
     text-align: center;
   }
   &__img {
@@ -379,6 +401,8 @@ h3 {
   &__button {
     margin: 0 auto;
   }
+  @media (max-width: 768px) {
+  }
 }
 // == /dealer ==
 
@@ -388,10 +412,10 @@ h3 {
   color: #fff;
   &-wrapper {
     display: flex;
+    flex-wrap: wrap;
   }
   &-text {
     flex-basis: 50%;
-    padding-left: 30px;
     &__title {
       font-size: 45px;
       font-weight: bold;
@@ -414,6 +438,40 @@ h3 {
       margin: 30px 0;
     }
   }
+  @media (max-width: 768px) {
+    &-wrapper {
+      justify-content: center;
+    }
+    &-text {
+      flex-basis: 70%;
+      text-align: center;
+      margin-bottom: 50px;
+      &__text {
+        width: 100%;
+      }
+    }
+    &-form {
+      flex-basis: 70%;
+      &__input {
+        width: 100%;
+      }
+      &__button {
+        margin: 45px auto;
+      }
+      &__rules {
+        margin-left: 30px;
+        font-size: 19px;
+      }
+      &__checkbox {
+        display: flex;
+        align-items: center;
+        input {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
 }
 // == /communicate ==
 
@@ -421,6 +479,7 @@ h3 {
 .proposal {
   &-wrapper {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
   &-item {
@@ -445,12 +504,18 @@ h3 {
       font-size: 18px;
     }
   }
+  @media (max-width: 768px) {
+    &-item {
+      width: 70%;
+      margin: 0 auto 30px auto;
+    }
+  }
 }
 // == /drive ==
 
 // == footer ==
 .footer {
-  padding: 150px 0 50px 0;
+  padding: 150px 0px 50px 0px;
   color: rgb(51, 51, 51);
   &-text {
     width: 100%;

@@ -12,6 +12,26 @@ $(document).ready(function() {
   $('.offer-slider').slick({
     arrows: true,
     slidesToShow: 3,
-    dots: true
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 2,
+          infinite: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 300,
+        settings: 'unslick' // destroys slick
+      }
+    ]
   });
 });

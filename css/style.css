@@ -1,28 +1,33 @@
-@charset "UTF-8";
 @font-face {
-  font-family: "Volkswagen Office Head";
+  font-family: 'Volkswagen Office Head';
   src: url("fonts/VWHeadOffice.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: "Volkswagen Print Text Bold";
+  font-family: 'Volkswagen Print Text Bold';
   src: url("fonts/VWText-Bold.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 .container {
-  margin: 0 auto;
-  max-width: 1300px; }
-  @media (max-width: ≥992px) {
-    .container {
-      max-width: 960px; } }
-  @media (max-width: ≥768px) {
-    .container {
-      max-width: 960px; } }
-  @media (max-width: ≥576px) {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto; }
+  @media (min-width: 576px) {
     .container {
       max-width: 540px; } }
+  @media (min-width: 768px) {
+    .container {
+      max-width: 720px; } }
+  @media (min-width: 992px) {
+    .container {
+      max-width: 960px; } }
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1140px; } }
   .container-full {
     max-width: 100%;
     overflow: hidden;
@@ -36,7 +41,7 @@
 
 body {
   color: #000;
-  font-family: "Volkswagen Office Head", sans-serif;
+  font-family: 'Volkswagen Office Head', sans-serif;
   font-size: 16px; }
 
 a {
@@ -235,13 +240,14 @@ h3 {
   background: #f3f5f6; }
   .news-wrapper {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between; }
   .news-item {
-    width: 33%;
+    width: 30%;
     text-align: center; }
-  .news__img {
-    width: 100%;
-    max-height: 225px; }
+  .news__img img {
+    max-width: 290px;
+    height: 180px; }
   .news__title {
     margin: 35px auto 10px auto;
     font-size: 25px;
@@ -250,9 +256,7 @@ h3 {
     width: 87%;
     min-height: 80px; }
   .news__text {
-    width: 75%;
-    margin: 0 auto;
-    height: 125px; }
+    margin: 0 auto; }
   .news__button {
     margin: 35px auto; }
   .news-link {
@@ -260,10 +264,17 @@ h3 {
     justify-content: center; }
     .news-link a {
       display: block; }
+  @media (max-width: 1024px) {
+    .news-wrapper {
+      justify-content: space-evenly;
+      align-items: center; } }
+  @media (max-width: 768px) {
+    .news-item {
+      width: 70%; } }
 
 .dealer-item {
   margin: auto;
-  width: 40%;
+  width: 50%;
   text-align: center; }
 
 .dealer__img {
@@ -287,10 +298,10 @@ h3 {
   background: #0099da;
   color: #fff; }
   .communicate-wrapper {
-    display: flex; }
+    display: flex;
+    flex-wrap: wrap; }
   .communicate-text {
-    flex-basis: 50%;
-    padding-left: 30px; }
+    flex-basis: 50%; }
     .communicate-text__title {
       font-size: 45px;
       font-weight: bold; }
@@ -306,9 +317,34 @@ h3 {
       margin-top: 45px; }
     .communicate-form__checkbox {
       margin: 30px 0; }
+  @media (max-width: 768px) {
+    .communicate-wrapper {
+      justify-content: center; }
+    .communicate-text {
+      flex-basis: 70%;
+      text-align: center;
+      margin-bottom: 50px; }
+      .communicate-text__text {
+        width: 100%; }
+    .communicate-form {
+      flex-basis: 70%; }
+      .communicate-form__input {
+        width: 100%; }
+      .communicate-form__button {
+        margin: 45px auto; }
+      .communicate-form__rules {
+        margin-left: 30px;
+        font-size: 19px; }
+      .communicate-form__checkbox {
+        display: flex;
+        align-items: center; }
+        .communicate-form__checkbox input {
+          width: 40px;
+          height: 40px; } }
 
 .proposal-wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between; }
 
 .proposal-item {
@@ -331,8 +367,13 @@ h3 {
   .proposal__link i {
     font-size: 18px; }
 
+@media (max-width: 768px) {
+  .proposal-item {
+    width: 70%;
+    margin: 0 auto 30px auto; } }
+
 .footer {
-  padding: 150px 0 50px 0;
+  padding: 150px 0px 50px 0px;
   color: #333333; }
   .footer-text {
     width: 100%;
